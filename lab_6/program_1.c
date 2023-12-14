@@ -8,7 +8,7 @@ int main() {
     printf("\nEnter the number of terms: ");
     scanf("%d", &terms);
 
-    for(i = 1;i<=3;i++)
+    for(i = 1;i<=terms;i++)
         result += pow(i, i+1); 
 
     printf("Result: %d\n", result);
