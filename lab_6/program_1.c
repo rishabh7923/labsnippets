@@ -1,17 +1,20 @@
 /* WAP to print this series. 1^2 + 2^3 + 3^4...*/
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
-int main() {
-    int terms, result = 0, i;
+int main()
+{
+    int sum = 0, terms;
 
-    printf("\nEnter the number of terms: ");
+    printf("Enter number of terms: ");
     scanf("%d", &terms);
 
-    for(i = 1;i<=terms;i++)
-        result += pow(i, i+1); 
+    for (int i = 1; i <= terms; i++) {
+        sum += pow(i, i + 1);
+        printf("%d^%d + ", i, i + 1);
+    }
 
-    printf("Result: %d\n", result);
+    printf("\b\b= %d", sum);
 
     return 0;
 }
